@@ -148,6 +148,7 @@ h6 {
 
 .formWrap {
   background-color: #ffffff;
+  filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.5));
   padding: var(--padding-xl);
 }
 
@@ -158,4 +159,8 @@ h6 {
 .hFlex {
   display: flex;
   flex-direction: row;
+}
+
+.formWrap > .hFlex {
+  gap: var(--padding-xl);
 }
