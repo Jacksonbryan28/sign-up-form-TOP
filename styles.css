@@ -227,3 +227,7 @@ input:invalid {
 input:focus {
   border-color: blue;
 }
+
+.required {
+  color: red;
+}

@@ -54,8 +54,15 @@
                 <h1>Lets do this!</h1>
                 <div class="hFlex">
                   <div class="vFlex">
-                    <label for="fn">First Name</label>
-                    <input type="text" id="fn" />
+                    <label for="fn"
+                      >First Name <span class="required">*</span></label
+                    >
+                    <input
+                      type="text"
+                      id="fn"
+                      required
+                      title="Please enter your first name."
+                    />
                   </div>
                   <div class="vFlex">
                     <label for="ln">Last Name</label>
@@ -74,12 +81,28 @@
                 </div>
                 <div class="hFlex">
                   <div class="vFlex">
-                    <label for="pw">Password</label>
-                    <input type="password" id="pw" />
+                    <label for="pw"
+                      >Password <span class="required">*</span></label
+                    >
+                    <input
+                      type="password"
+                      id="pw"
+                      title="Enter password at least 8 characters long with a uppercase letter, lowercase letter, number, and special character"
+                      pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$"
+                      required
+                    />
                   </div>
                   <div class="vFlex">
-                    <label for="pwc">Confirm Password</label>
-                    <input type="password" id="pwc" />
+                    <label for="pwc"
+                      >Confirm Password <span class="required">*</span></label
+                    >
+                    <input
+                      type="password"
+                      id="pwc"
+                      title="Enter password at least 8 characters long with a uppercase letter, lowercase letter, number, and special character"
+                      pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$"
+                      required
+                    />
                   </div>
                 </div>
               </div>
