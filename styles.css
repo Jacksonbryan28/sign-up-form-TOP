@@ -146,7 +146,8 @@ h6 {
 .center {
   display: flex;
   align-items: center;
-  gap: var(--padding-m);
+  padding: var(--padding-m);
+  gap: var(--padding-s);
   justify-content: center;
   background-color: var(--clr-blackTransparent);
 }
