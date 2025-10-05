@@ -2,10 +2,29 @@
   --clr-lightGray: #f2f2f2;
   --clr-blackTransparent: #00000080;
   --clr-primary: #364856;
+  --clr-boarder: #e5e7eb;
   --padding-s: 8px;
   --padding-m: 16px;
   --padding-l: 24px;
   --padding-xl: 36px;
+}
+
+@font-face {
+  font-family: "Witchwoode";
+  src: url("fonts/Witchwoode-Regular.woff2") format("woff2"),
+    url("fonts/Witchwoode-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Witchwoode";
+  src: url("fonts/Witchwoode-Regular.woff2") format("woff2"),
+    url("fonts/Witchwoode-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
 /* 1. Use a more-intuitive box-sizing model */
@@ -77,22 +96,12 @@ h6 {
   isolation: isolate;
 }
 
-@font-face {
-  font-family: "Witchwoode";
-  src: url("fonts/Witchwoode-Regular.woff2") format("woff2"),
-    url("fonts/Witchwoode-Regular.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Witchwoode";
-  src: url("fonts/Witchwoode-Regular.woff2") format("woff2"),
-    url("fonts/Witchwoode-Regular.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
 }
 
 .hero-text {
@@ -196,12 +205,25 @@ a {
 label {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
-input {
-  min-width: 250px;
-}
 
 .credit {
   color: white;
   align-self: center;
   margin-bottom: var(--padding-s, 8px);
+}
+
+input {
+  border-radius: 4px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  min-width: 250px;
+  border: 1px solid var(--clr-boarder, lightgray);
+  /* border-color: var(--clr-boarder, lightgray); */
+}
+
+input:invalid {
+  border-color: red;
+}
+
+input:focus {
+  border-color: blue;
 }
